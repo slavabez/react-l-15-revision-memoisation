@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import PropsDemo from "./pages/PropsDemo";
 import CssDemo from "./pages/CssDemo";
 import UseStateDemo from "./pages/UseStateDemo";
@@ -46,7 +46,7 @@ const App = () => {
           </ul>
         </nav>
 
-        <Switch>
+        <Routes>
           <Route path="/props" component={PropsDemo} />
           <Route path="/css" component={CssDemo} />
           <Route path="/usestate" component={UseStateDemo} />
@@ -56,7 +56,7 @@ const App = () => {
           <Route path="/context" component={ContextDemo} />
           <Route path="/useform" component={UseFormDemo} />
           {/* <Route path="/redux" component={ReduxDemo} /> */}
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
